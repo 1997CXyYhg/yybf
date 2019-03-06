@@ -1,4 +1,4 @@
-package com.yybf.yybf.entity;
+package com.yybf.entity;
 
 public class User {
     private Integer id;

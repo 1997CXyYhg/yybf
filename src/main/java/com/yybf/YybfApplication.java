@@ -1,4 +1,4 @@
-package com.yybf.yybf;
+package com.yybf;
 
 import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
-import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.util.Properties;
 
@@ -17,9 +15,9 @@ import java.util.Properties;
  *
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.yybf.yybf.dao")
+@MapperScan(basePackages = "com.yybf.dao")
 @EnableCaching
-@ComponentScan(basePackages = {"com.yybf.yybf.controller","com.yybf.yybf.dao","com.yybf.yybf.service"})
+@ComponentScan(basePackages = {"com.yybf.controller","com.yybf.dao","com.yybf.service"})
 public class YybfApplication {
 
     public static void main(String[] args) {

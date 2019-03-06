@@ -1,4 +1,4 @@
-package com.yybf.yybf;
+package com.yybf;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

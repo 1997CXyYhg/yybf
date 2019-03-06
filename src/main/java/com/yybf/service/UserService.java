@@ -1,8 +1,8 @@
-package com.yybf.yybf.service;
+package com.yybf.service;
 
 import com.github.pagehelper.PageHelper;
-import com.yybf.yybf.dao.UserMapper;
-import com.yybf.yybf.entity.User;
+import com.yybf.dao.UserMapper;
+import com.yybf.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

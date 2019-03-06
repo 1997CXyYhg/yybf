@@ -1,21 +1,16 @@
-package com.yybf.yybf.controller;
+package com.yybf.controller;
 
 
 import com.alibaba.fastjson.JSONArray;
-import com.fasterxml.jackson.annotation.JsonAlias;
-import com.yybf.yybf.entity.User;
-import com.yybf.yybf.service.UserService;
-import org.apache.ibatis.annotations.Param;
+import com.yybf.entity.User;
+import com.yybf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
-import java.net.URLEncoder;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author yhg

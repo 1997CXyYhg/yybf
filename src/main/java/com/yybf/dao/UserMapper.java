@@ -1,5 +1,5 @@
-package com.yybf.yybf.dao;
-import com.yybf.yybf.entity.User;
+package com.yybf.dao;
+import com.yybf.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
