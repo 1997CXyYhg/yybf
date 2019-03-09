@@ -11,6 +11,6 @@ public class YybfApplicationTests {
 
     @Test
     public void contextLoads() {
-    }
 
+    }
 }

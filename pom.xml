@@ -34,6 +34,12 @@
         </dependency>
 
         <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>2.1.5</version>
+        </dependency>
+
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
@@ -67,37 +73,34 @@
             </plugin>
 
             <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
+                <version>1.3.6</version>
                 <configuration>
-                    <!--配置文件的位置-->
-                    <configurationFile>C:\Users\wt-pc\IdeaProjects\yybf\src\main\resources\generatorConfig.xml</configurationFile>
-                    <verbose>true</verbose>
+                    <configurationFile>
+                        ${basedir}/src/main/resources/generatorConfig.xml
+                    </configurationFile>
                     <overwrite>true</overwrite>
+                    <verbose>true</verbose>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>Generate MyBatis Artifacts</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <dependencies>
                     <dependency>
-                        <groupId>org.mybatis.generator</groupId>
-                        <artifactId>mybatis-generator-core</artifactId>
-                        <version>1.3.2</version>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.15</version>
                     </dependency>
-
                     <dependency>
-                        <groupId>com.github.pagehelper</groupId>
-                        <artifactId>pagehelper</artifactId>
-                        <version>4.1.6</version>
+                        <groupId>tk.mybatis</groupId>
+                        <artifactId>mapper</artifactId>
+                        <version>4.0.0</version>
                     </dependency>
-
-
                 </dependencies>
             </plugin>
         </plugins>

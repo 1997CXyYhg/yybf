@@ -15,9 +15,9 @@ import java.util.Properties;
  *
  */
 @SpringBootApplication
-@MapperScan(basePackages = "com.yybf.dao")
+@MapperScan(basePackages = "com.yybf.mapper")
 @EnableCaching
-@ComponentScan(basePackages = {"com.yybf.controller","com.yybf.dao","com.yybf.service"})
+@ComponentScan(basePackages = {"com.yybf.controller","com.yybf.mapper","com.yybf.service"})
 public class YybfApplication {
 
     public static void main(String[] args) {

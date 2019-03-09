@@ -1,43 +1,124 @@
 package com.yybf.entity;
 
-public class User {
-    private Integer id;
+import java.util.Date;
+import javax.persistence.*;
 
-    private String name;
+@Table(name = "user_table")
+public class User {
+    @Id
+    private Integer uid;
+
+    @Column(name = "user_name")
+    private String userName;
+
+    @Column(name = "user_head_img_file")
+    private String userHeadImgFile;
 
     private String username;
 
     private String password;
 
-    public Integer getId() {
-        return id;
+    @Column(name = "user_create_time")
+    private Date userCreateTime;
+
+    @Column(name = "user_update_time")
+    private Date userUpdateTime;
+
+    /**
+     * @return uid
+     */
+    public Integer getUid() {
+        return uid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    /**
+     * @param uid
+     */
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
 
-    public String getName() {
-        return name;
+    /**
+     * @return user_name
+     */
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    /**
+     * @param userName
+     */
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
+    /**
+     * @return user_head_img_file
+     */
+    public String getUserHeadImgFile() {
+        return userHeadImgFile;
+    }
+
+    /**
+     * @param userHeadImgFile
+     */
+    public void setUserHeadImgFile(String userHeadImgFile) {
+        this.userHeadImgFile = userHeadImgFile;
+    }
+
+    /**
+     * @return username
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     * @param username
+     */
     public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+        this.username = username;
     }
 
+    /**
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * @param password
+     */
     public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+        this.password = password;
+    }
+
+    /**
+     * @return user_create_time
+     */
+    public Date getUserCreateTime() {
+        return userCreateTime;
+    }
+
+    /**
+     * @param userCreateTime
+     */
+    public void setUserCreateTime(Date userCreateTime) {
+        this.userCreateTime = userCreateTime;
+    }
+
+    /**
+     * @return user_update_time
+     */
+    public Date getUserUpdateTime() {
+        return userUpdateTime;
+    }
+
+    /**
+     * @param userUpdateTime
+     */
+    public void setUserUpdateTime(Date userUpdateTime) {
+        this.userUpdateTime = userUpdateTime;
     }
 }
